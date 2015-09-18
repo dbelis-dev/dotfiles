@@ -27,7 +27,7 @@ if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
 
-" colorscheme symfony    " obsidian
+ colorscheme symfony    " obsidian
 
  set laststatus=2
  set statusline=
@@ -133,7 +133,7 @@ if has('gui_running')
 else
   set background=dark
 endif
-colorscheme solarized
+" colorscheme solarized
 set rtp+=/usr/lib/python2.7/site-packages/Powerline-beta-py2.7.egg/powerline/bindings/vim
 " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 set noshowmode
