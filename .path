@@ -14,11 +14,8 @@ pathmunge () {
 # Add `~/bin` to the `$PATH`
 pathmunge "$HOME/bin"
 
-# Add rbenv to the path
-pathmunge "$HOME/.rbenv/bin"
-
-# Add nodenv to the path
-pathmunge "$HOME/.nodenv/bin"
+# Add contx to the path
+pathmunge "$HOME/contx/dev_tools/scripts"
 
 # load any local path changes
 [ -r .path.local ] && source .path.local
