@@ -1,0 +1,5 @@
+[include]
+path = /home/vagrant/contx/dev_tools/scripts/git/gitconfig
+[user]
+        email = dimitrios.belis@williamhill.com
+        name  = Dimitrios Belis
