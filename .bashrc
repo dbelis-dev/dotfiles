@@ -10,6 +10,9 @@ if [ "$PS1" ]; then
   ##################################
   # BEG History manipulation section
 
+    # Set the size of the history file
+    HISTSIZE=1000
+    HISTFILESIZE=10000
 
     # Save timestamp info for every command
     export HISTTIMEFORMAT="[%F %T] ~~~ "
