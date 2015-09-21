@@ -25,7 +25,7 @@ function prompt {
   local CYANBOLD="\[\033[1;36m\]"
   local WHITE="\[\033[0;37m\]"
   local WHITEBOLD="\[\033[1;37m\]"
-  export PS1="$WHITEBOLD# $GREEN\u$WHITEBOLD. $BLUE\h$WHITEBOLD. $YELLOW\d$WHITE at $PURPLE\@$WHITEBOLD. $CYAN\w\n  $WHITE"
+  export PS1="$WHITEBOLD# $PURPLE\u$NORMAL at $CYAN\h$NORMAL in $GREEN\w$NORMAL\n $NORMAL"
 }
 prompt
 PROMPT_COMMAND='history -a ; echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
