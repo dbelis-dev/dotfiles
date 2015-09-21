@@ -35,9 +35,16 @@
   logbehind = log --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' HEAD..@{u}
   diffbehind = diff HEAD..@{u}
 
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+
+  # Add config to bring in github pull requests
+  # See: https://gist.github.com/piscisaureus/3342247
+  pullify = config --add remote.origin.fetch '+refs/pull/*/head:refs/remotes/origin/pr/*'
+
 [apply]
 	# Detect whitespace errors when applying a patch
-	whitespace = fix
+	whitespace = warn
 
 [core]
 	# Use custom `.gitignore` and `.gitattributes`
@@ -46,10 +53,12 @@
 	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
 	whitespace = space-before-tab,indent-with-non-tab,trailing-space
   autocrlf = input
+  precomposeunicode = true
 
 [color]
 	# Use colors in Git commands that are capable of colored output when outputting to the terminal
 	ui = auto
+  interactive = auto
 [color "branch"]
 	current = yellow reverse
 	local = yellow
@@ -63,10 +72,12 @@
 	added = yellow
 	changed = green
 	untracked = cyan
-[merge]
-	# Include summaries of merged commits in newly created merge commit messages
-	log = true
-  tool = kdiff3
+
+# merge tool configured in .gitconfig.local
+#[merge]
+#	# Include summaries of merged commits in newly created merge commit messages
+#	log = true
+#  tool = kdiff3
 
 # Use `origin` as the default remote on the `master` branch in all cases
 [branch "master"]
@@ -88,7 +99,13 @@
 	insteadOf = "gist:"
 
 [push]
-	default = matching
+	default = simple
+
+[filter "media"]
+  required = true
+  clean = git media clean %f
+  smudge = git media smudge %f
+
 [include]
   # username, creds, etc. in local file not kept in git
   path = ~/.gitconfig.local

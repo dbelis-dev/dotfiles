@@ -1,7 +1,8 @@
+execute pathogen#infect()
 " Make Vim more useful
 set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
-set clipboard=unnamed
+"set clipboard=unnamed
 " Enhance command-line completion
 set wildmenu
 " Allow cursor keys in insert mode
@@ -25,6 +26,32 @@ set directory=~/.vim/swaps
 if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
+
+ filetype plugin indent on
+
+ let g:syntastic_always_populate_loc_list = 1
+ let g:syntastic_auto_loc_list = 1
+ let g:syntastic_check_on_open = 1
+ let g:syntastic_check_on_wq = 0
+
+ colorscheme symfony    " obsidian
+
+ set laststatus=2
+ set statusline=
+ set statusline +=%5*%{&ff}%*            "file format
+ set statusline +=%3*%y%*                "file type
+ set statusline +=\ %{fugitive#statusline()} "show git branch
+ set statusline +=%*
+ set statusline +=%4*\ %<%F%*            "full path
+ set statusline +=%#warningmsg#
+ set statusline +=\ %{SyntasticStatuslineFlag()}
+ set statusline +=%*
+ set statusline +=%1*%=%5l%*             "current line
+ set statusline +=%2*/%L%*               "total lines
+ set statusline +=%1*%4v\ %*             "virtual column number
+ set statusline +=%2*0x%04B\ %*          "character under cursor
+ set statusline +=%*
+
 
 " Respect modeline in files
 set modeline
@@ -72,6 +99,7 @@ set shortmess=atI
 set showmode
 " Show the filename in the window titlebar
 set title
+set titleold=""
 " Show the (partial) command as it’s being typed
 set showcmd
 " Don't use relative line numbers
@@ -102,6 +130,8 @@ if has("autocmd")
 	filetype on
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+	autocmd BufEnter * let &titlestring = $HOSTNAME . ":" . expand("%:p:~")
+  autocmd FileType make setlocal noexpandtab
 endif
 
 " Colours
@@ -110,7 +140,14 @@ if has('gui_running')
 else
   set background=dark
 endif
-colorscheme solarized
+" colorscheme solarized
 set rtp+=/usr/lib/python2.7/site-packages/Powerline-beta-py2.7.egg/powerline/bindings/vim
 " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 set noshowmode
+
+if &term == "xterm" || &term == "vt220" || &term == "xterm-256color"
+  " Let the title stuff work even if we don't open the DISPLAY
+  set title
+  set t_ts=]2;
+  set t_fs= 
+endif

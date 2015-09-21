@@ -10,6 +10,9 @@ if [ "$PS1" ]; then
   ##################################
   # BEG History manipulation section
 
+    # Set the size of the history file
+    HISTSIZE=1000
+    HISTFILESIZE=10000
 
     # Save timestamp info for every command
     export HISTTIMEFORMAT="[%F %T] ~~~ "
@@ -42,6 +45,6 @@ if [ "$PS1" ]; then
 
   # Preload the working directory history list from the directory history
   if type -t hd >/dev/null && type -t cd_func >/dev/null; then
-      for x in `hd 20` `pwd`; do cd_func $x ; done
+      { hd 20 ; pwd ; } | while read x ; do cd_func "$x" ; done
   fi
 fi
