@@ -143,8 +143,5 @@ alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 7'"
 alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
-<<<<<<< HEAD
 # Ack-Gep to Ack
 alias ack="ack-grep"
-=======
->>>>>>> 4877eeaabb3b7f74ee93998bafe5ed559506f11a
