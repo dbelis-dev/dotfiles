@@ -66,9 +66,9 @@ syntax on
 " Highlight current line
 " set cursorline
 " indent using two spaces
-set shiftwidth=2
+set shiftwidth=4
 " Make tabs as wide as two spaces
-set tabstop=2
+set tabstop=4
 " always expand tabs into spaces
 set expandtab
 set softtabstop=0
