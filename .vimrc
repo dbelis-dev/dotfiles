@@ -151,3 +151,7 @@ if &term == "xterm" || &term == "vt220" || &term == "xterm-256color"
   set t_ts=]2;
   set t_fs= 
 endif
+
+" Tab navigation like Firefox.
+nnoremap <C-t>     :tabnew<CR>
+inoremap <C-t>     <Esc>:tabnew<CR>
