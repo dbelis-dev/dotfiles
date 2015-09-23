@@ -74,3 +74,7 @@ command -v rbenv &> /dev/null && eval "$(rbenv init -)"
 
 # initialize nodenv
 command -v nodenv &> /dev/null && eval "$(nodenv init -)"
+
+# Allow terminal flow control chars in VIM
+stty -ixon
+
