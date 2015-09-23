@@ -27,6 +27,9 @@ if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
 
+ " Allow terminal flow control chars in VIM
+ stty -ixon
+
  filetype plugin indent on
 
  let g:syntastic_always_populate_loc_list = 1
