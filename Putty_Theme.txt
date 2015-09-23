@@ -1,0 +1,7 @@
+### Install Eclectide
+https://gist.github.com/darekkay/1a7b3c0f1b5af5c1bdcd
+http://eclectide.com/blog/2015/03/21/my-putty-color-scheme/
+
+
+### Install Solarized
+https://github.com/brantb/solarized
