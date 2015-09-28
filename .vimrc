@@ -142,8 +142,6 @@ else
 endif
 " colorscheme solarized
 set rtp+=/usr/lib/python2.7/site-packages/Powerline-beta-py2.7.egg/powerline/bindings/vim
-" Hide the default mode text (e.g. -- INSERT -- below the statusline)
-set noshowmode
 
 if &term == "xterm" || &term == "vt220" || &term == "xterm-256color"
   " Let the title stuff work even if we don't open the DISPLAY
