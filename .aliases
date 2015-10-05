@@ -143,8 +143,12 @@ alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 7'"
 alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
-# Ack-Gep to Ack
+# Ack-Grep to Ack
 alias ack="ack-grep -i"
 
 # Open multiple files in Vim as tabs
 alias vim="vim -p"
+
+# SSH to CX jumphosts
+alias sshdev="ssh dbelis@jump.cxp.williamhill.plc"
+alias sshppx="ssh dbelis@brs-ncde-linux-jump-01.nonprod.williamhill.plc"
