@@ -17,10 +17,6 @@ if [ "$PS1" ]; then
     # Save timestamp info for every command
     export HISTTIMEFORMAT="[%F %T] ~~~ "
 
-    # Dump the history file after every command
-    shopt -s histappend
-    [[ -f ${HOME}/bin/a_loghistory_func.sh ]] && . ${HOME}/bin/a_loghistory_func.sh
-
     # Specific history file per host
     export HISTFILE=$HOME/.history-$HOSTNAME
 
