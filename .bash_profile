@@ -9,16 +9,12 @@ declare -a extra_files=(
   ~/.aliases
   ~/.functions
   ~/.extra
-  ~/.amazon_web_services
   ~/.boot2docker/init
 )
 for extra_file in "${extra_files[@]}"; do
   [ -r "$extra_file" ] && source "$extra_file"
 done
 unset extra_file
-
-# Load boxen environment, if present
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
@@ -55,9 +51,6 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # Autocomplete Grunt commands
 which grunt &> /dev/null && eval "$(grunt --completion=bash)"
-
-# Add completion for awscli
-complete -C aws_completer aws
 
 # If possible, add tab completion for many more commands
 declare -a completion_files=(
