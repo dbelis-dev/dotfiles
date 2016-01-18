@@ -48,3 +48,5 @@ if [ "$PS1" ]; then
       { hd 20 ; pwd ; } | while read x ; do cd_func "$x" ; done
   fi
 fi
+
+[[ -s "/home/vagrant/.gvm/scripts/gvm" ]] && source "/home/vagrant/.gvm/scripts/gvm"
