@@ -20,3 +20,7 @@ ehthumbs.db
 *~
 \#*\#
 tags
+
+# template validation folder
+validation_results/
+
