@@ -24,28 +24,54 @@
 	# Interactive rebase with the given number of latest commits
 	reb = "!r() { git rebase -i HEAD~$1; }; r"
 
-  # Print out a nice ascii graph of the branches with commit comments, and refs shown.
-  graph = log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    ammend = commit --amend
+    amend = ammend
+    ammed = ammend
+    s = status
+    co = checkout
+    last = cat-file commit HEAD
+    br = branch
+    filelog = log -u
+    fl = log -u
+    dlc = diff --cached HEAD^
 
-  # log/diff the commits you are ahead of the remote (Note the @{u} points to the upstream branch HEAD is what you currently have checked out):
-  logahead = log --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' @{u}..HEAD
-  diffahead = diff @{u}..HEAD
+    assume = update-index --assume-unchanged
+    unassume = update-index --no-assume-unchanged
+    assumed = "!git ls-files -v | grep ^h | cut -c 3-"
 
-  # log/diff the commits you are behind the remote (use git fetch since pull will automatically merge these commits in):
-  logbehind = log --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' HEAD..@{u}
-  diffbehind = diff HEAD..@{u}
+    lasttag = describe --tags --abbrev=0
+    lt = describe --tags --abbrev=0
 
-  lol = log --graph --decorate --pretty=oneline --abbrev-commit
-  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    vim="!vim"
+    vi=vim
+    pushall = !"for i in `git remote`; do git push $i; done;"
+    f = fetch
+    ds = diff --staged
+    rel = !"git checke master && git relstart $@ && git relfinish && git push --all cx_local && git push --tags cx_local && echo $@"
+    push-local = !"git push --all cx_local && git push --tags cx_local”
 
-  # Add config to bring in github pull requests
-  # See: https://gist.github.com/piscisaureus/3342247
-  pullify = config --add remote.origin.fetch '+refs/pull/*/head:refs/remotes/origin/pr/*'
+      # Print out a nice ascii graph of the branches with commit comments, and refs shown.
+      graph = log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 
-  # More git graph options 
-  lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-  lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
-  lg = !"git lg1"
+      # log/diff the commits you are ahead of the remote (Note the @{u} points to the upstream branch HEAD is what you currently have checked out):
+      logahead = log --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' @{u}..HEAD
+      diffahead = diff @{u}..HEAD
+
+      # log/diff the commits you are behind the remote (use git fetch since pull will automatically merge these commits in):
+      logbehind = log --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' HEAD..@{u}
+      diffbehind = diff HEAD..@{u}
+
+      lol = log --graph --decorate --pretty=oneline --abbrev-commit
+      lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+
+      # Add config to bring in github pull requests
+      # See: https://gist.github.com/piscisaureus/3342247
+      pullify = config --add remote.origin.fetch '+refs/pull/*/head:refs/remotes/origin/pr/*'
+
+      # More git graph options 
+      lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+      lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+      lg = !"git lg1"
 
 [apply]
 	# Detect whitespace errors when applying a patch
