@@ -24,6 +24,9 @@
 	# Interactive rebase with the given number of latest commits
 	reb = "!r() { git rebase -i HEAD~$1; }; r"
 
+    ## Git Add/Commit/Push
+    acp = !sh -c 'git add -A && git commit -m \"$@\" && git push' -
+
     ammend = commit --amend
     amend = ammend
     ammed = ammend
