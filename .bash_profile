@@ -65,3 +65,5 @@ command -v nodenv &> /dev/null && eval "$(nodenv init -)"
 # Allow terminal flow control chars in VIM
 stty -ixon
 
+# Set 256 colour terminal
+test "$TERM" = xterm && export TERM=xterm-256color

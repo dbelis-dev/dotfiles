@@ -146,6 +146,9 @@ alias ack="ack-grep -i"
 # Open multiple files in Vim as tabs
 alias vim="vim -p"
 
+# tmux using 256 colours
+alias tmux="tmux -2"
+
 # SSH to CX jumphosts
 alias sshcxp="ssh dbelis@jump.cxp.williamhill.plc"
 alias sshcxd="ssh dbelis@jump.cxd.williamhill.plc"
