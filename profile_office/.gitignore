@@ -1,0 +1,26 @@
+# Compiled Python files
+*.pyc
+
+# Folder view configuration files
+.DS_Store
+.DS_Store?
+Desktop.ini
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# Thumbnail cache files
+._*
+Thumbs.db
+ehthumbs.db
+*.swp
+*.swo
+*.orig
+*~
+\#*\#
+tags
+
+# template validation folder
+validation_results/
+
