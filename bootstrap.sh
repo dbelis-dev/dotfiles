@@ -14,7 +14,7 @@ function selectProfile() {
     array=(profile*/)
     PS3="Which profile do you want applied? "
     echo "There are ${#array[@]} profiles in the current path"; \
-        select dir in "${array[@]}"; do echo "About to apply: ${dir}"'!'; break; done
+        select dir in "${array[@]}"; do echo "About to apply: ${dir}"; break; done
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
