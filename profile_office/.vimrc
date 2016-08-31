@@ -54,7 +54,7 @@ endif
  let g:syntastic_check_on_open = 1
  let g:syntastic_check_on_wq = 0
 
- colorscheme symfony    " obsidian
+ colorscheme BlackSea
 
  set laststatus=2
  set statusline=
