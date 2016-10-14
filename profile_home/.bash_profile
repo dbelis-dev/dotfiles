@@ -67,3 +67,6 @@ stty -ixon
 
 # Set 256 colour terminal
 test "$TERM" = xterm && export TERM=xterm-256color
+
+# Rebuild SSH config (off partial configs in config.d)
+cat ~/.ssh/config.d/* > ~/.ssh/config
