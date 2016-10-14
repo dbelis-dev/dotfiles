@@ -142,4 +142,4 @@
 
 [include]
   # username, creds, etc. in local file not kept in git
-  path = ~/.gitconfig.local
+  path = /home/vagrant/contx/dev_tools/scripts/git/gitconfig
