@@ -143,3 +143,8 @@
 [include]
   # username, creds, etc. in local file not kept in git
   path = ~/.gitconfig.local
+
+[user]
+  email = demetrios@belis.net
+  name = Dimitrios Belis
+
