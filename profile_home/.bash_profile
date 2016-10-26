@@ -72,5 +72,13 @@ test "$TERM" = xterm && export TERM=xterm-256color
 cat ~/.ssh/config.d/* > ~/.ssh/config
 
 # Create Go project workspace (if not exist)
-[[ -d ~/projects/golang ]] || mkdir -p ~/projects/golang
-
+[[ -d ~/workspace/golang ]] || mkdir -p ~/workspace/golang
+## Set the GOPATH env variable
+export GOPATH=~/workspace/golang
+## Setup the skeleton directories
+[[ -d ~/workspace/golang/bin ]] || mkdir -p ~/workspace/golang/bin
+[[ -d ~/workspace/golang/src ]] || mkdir -p ~/workspace/golang/src
+[[ -d ~/workspace/golang/pkg ]] || mkdir -p ~/workspace/golang/pkg
+## Add to PATH
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOROOT/bin

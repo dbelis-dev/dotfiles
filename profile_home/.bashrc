@@ -51,8 +51,6 @@ fi
 
 [[ -s "/home/vagrant/.gvm/scripts/gvm" ]] && source "/home/vagrant/.gvm/scripts/gvm"
 
-export PATH="/home/vagrant/.linuxbrew/bin:/home/vagrant/contx/dev_tools/scripts:/home/vagrant/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="$PATH:/home/vagrant/.linuxbrew/bin:/home/vagrant/contx/dev_tools/scripts:/home/vagrant/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 export MANPATH="/home/vagrant/.linuxbrew/share/man:"
 export INFOPATH="/home/vagrant/.linuxbrew/share/info:"
-## Set workspace for Go projects
-export GOPATH=~/projects/golang
