@@ -94,7 +94,7 @@ set tabstop=4
 set expandtab
 set softtabstop=0
 " Show “invisible” characters
-" set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_,extends:>,precedes:<
 " set list
 " Highlight searches
 set hlsearch
