@@ -82,3 +82,6 @@ export GOPATH=~/workspace/golang
 ## Add to PATH
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
+
+# Create Python project workspace
+[[ -d ~/workspace/python ]] || mkdir -p ~/workspace/python
