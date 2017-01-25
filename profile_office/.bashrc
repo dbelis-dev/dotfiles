@@ -49,8 +49,8 @@ if [ "$PS1" ]; then
   fi
 fi
 
-[[ -s "/home/vagrant/.gvm/scripts/gvm" ]] && source "/home/vagrant/.gvm/scripts/gvm"
+[[ -s "~/.gvm/scripts/gvm" ]] && source "~/.gvm/scripts/gvm"
 
-export PATH="$PATH:/home/vagrant/.linuxbrew/bin:/home/vagrant/contx/dev_tools/scripts:/home/vagrant/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-export MANPATH="/home/vagrant/.linuxbrew/share/man:"
-export INFOPATH="/home/vagrant/.linuxbrew/share/info:"
+export PATH="$PATH:~/.linuxbrew/bin:~/contx/dev_tools/scripts:~/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export MANPATH="~/.linuxbrew/share/man:"
+export INFOPATH="~/.linuxbrew/share/info:"
