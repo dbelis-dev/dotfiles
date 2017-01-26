@@ -50,7 +50,7 @@ which grunt &> /dev/null && eval "$(grunt --completion=bash)"
 declare -a completion_files=(
   /etc/bash_completion
   /usr/share/bash-completion/bash_completion
-  /opt/boxen/homebrew/etc/bash_completion
+  /usr/local/etc/bash_completion
 )
 for completion_file in "${completion_files[@]}"; do
   [ -f "$completion_file" ] && source "$completion_file"
