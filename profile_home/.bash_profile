@@ -81,4 +81,4 @@ export GOPATH=~/workspace/golang
 [[ -d ~/workspace/golang/pkg ]] || mkdir -p ~/workspace/golang/pkg
 ## Add to PATH
 export GOROOT=/usr/local/go
-export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:$GOROOT/bin:$(go env GOPATH)/bin
