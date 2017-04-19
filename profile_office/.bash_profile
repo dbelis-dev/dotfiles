@@ -85,3 +85,6 @@ export PATH=$PATH:$GOROOT/bin:$(go env GOPATH)/bin
 
 # Create Python project workspace
 [[ -d ~/workspace/python ]] || mkdir -p ~/workspace/python
+
+# Add CONTX to CD-PATH
+export CDPATH=.:~:~/contx

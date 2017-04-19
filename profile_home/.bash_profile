@@ -82,3 +82,6 @@ export GOPATH=~/workspace/golang
 ## Add to PATH
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin:$(go env GOPATH)/bin
+
+# Add root dir to CD-PATH
+export CDPATH=.:~
