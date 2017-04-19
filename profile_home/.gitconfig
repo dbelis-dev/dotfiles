@@ -150,3 +150,6 @@
   email = demetrios@belis.net
   name = Dimitrios Belis
 
+[diff "pptx"]
+  textconv = unpptx
+

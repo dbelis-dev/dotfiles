@@ -150,3 +150,5 @@
   email = dimitrios.belis@williamhill.com
   name = Dimitrios Belis
 
+[diff "pptx"]
+  textconv = unpptx
