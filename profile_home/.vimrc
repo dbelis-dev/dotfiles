@@ -19,6 +19,7 @@ Plugin 'fatih/vim-go'
 Plugin 'majutsushi/tagbar'
 Plugin 'garyburd/go-explorer'
 Plugin 'fatih/molokai'
+Plugin 'vim-airline/vim-airline'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -63,8 +64,7 @@ let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 let g:go_list_type = "quickfix"
 
- "colorscheme BlackSea
- colorscheme molokai
+ colorscheme obsidian
 
  set laststatus=2
  set statusline=
