@@ -73,3 +73,6 @@ cat ~/.ssh/config.d/* > ~/.ssh/config
 
 # Create Python project workspace
 [[ -d ~/workspace/python ]] || mkdir -p ~/workspace/python
+
+# Setup virtual-env for DevOps project
+[[ -d ~/workspace/python/venv/devops ]] && source ~/workspace/python/venv/devops/bin/activate
