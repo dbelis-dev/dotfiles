@@ -75,4 +75,4 @@ cat ~/.ssh/config.d/* > ~/.ssh/config
 [[ -d ~/.ssh/sockets ]] || mkdir -p ~/.ssh/sockets
 
 # Install Vundle for VIM editor
-[[ -d ~/.vim/bundle/Vundle.vim ]] || git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim && vim +PluginInstall +qall
+[[ -d ~/.vim/bundle/Vundle.vim ]] || "git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim && vim +PluginInstall +qall"
