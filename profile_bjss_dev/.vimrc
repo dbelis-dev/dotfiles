@@ -15,9 +15,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tmux-plugins/tmux-resurrect'
-Plugin 'fatih/vim-go'
 Plugin 'majutsushi/tagbar'
-Plugin 'garyburd/go-explorer'
 Plugin 'vim-airline/vim-airline'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
