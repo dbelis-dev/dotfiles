@@ -135,7 +135,7 @@
 	insteadOf = "gist:"
 
 [push]
-	default = simple
+	default = matching
 
 [filter "media"]
   required = true
