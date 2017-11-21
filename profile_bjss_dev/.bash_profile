@@ -72,4 +72,7 @@ cat ~/.ssh/config.d/* > ~/.ssh/config
 # Setup virtual-env for DevOps project
 [[ -d ~/workspace/python/venv/devops ]] && source ~/workspace/python/venv/devops/bin/activate
 
-[ -d ~/.ssh/sockets ]] || mkdir -p ~/.ssh/sockets
+[[ -d ~/.ssh/sockets ]] || mkdir -p ~/.ssh/sockets
+
+# Install Vundle for VIM editor
+[[ -d ~/.vim/bundle/Vundle.vim ]] || git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
