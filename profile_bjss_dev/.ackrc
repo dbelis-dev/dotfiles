@@ -1,0 +1,11 @@
+# Add Puppet file type
+--type-set=puppet:ext:pp
+
+# mg
+--pager=less --long-prompt --no-init --no-lessopen --quiet --quit-if-one-screen --RAW-CONTROL-CHARS --line-numbers
+
+# Only search with case sensitivity if there is mixed case
+--smart-case
+
+# Sort the files
+--sort-files
